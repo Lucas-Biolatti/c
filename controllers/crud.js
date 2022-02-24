@@ -1,6 +1,7 @@
 const conexion = require('../database/db');
 const formidable = require('formidable');
 const url = require('url');
+
 //Inserts
 exports.add = (req,res)=>{
 
@@ -127,6 +128,7 @@ exports.ordenesAbiertas = (req,res)=>{
         }
     })
 }
+
 exports.serchOrder = (req,res)=>{
     let idSector = url.parse(req.url,true).query.id;
     let sector= url.parse(req.url,true).query.nombre;

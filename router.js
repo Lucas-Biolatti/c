@@ -176,11 +176,15 @@ router.get('/listActos',(req,res)=>{
         }
     })
 })
+router.get('/resolverAccidente',(req,res)=>{
+    res.render('./vistasSeg/resolverAccidente');
+})
 
 
 //Invocar js de metodos
 const crud = require('./controllers/crud');
 const { resourceLimits } = require('worker_threads');
+const { render } = require('express/lib/response');
 
 router.get('/resolverorden',crud.resolverOrden);
 
